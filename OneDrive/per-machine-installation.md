@@ -74,24 +74,12 @@ We do not support automated migration from per-machine to per-user. To revert ba
 
 **How can I detect if I have a per-machine installation through Configuration Manager?** 
 
-If you are using a 64-bit machine, use the following registry detection rule:
-
-|Field|Value|
-|---|---|
-|Hive|   HKEY_LOCAL_MACHINE|
-|Key|    SOFTWARE\WOW6432Node\Microsoft\OneDrive|
-|Value|  Version|
-|32bit on 64bit| TRUE|
-|Type|   Version|
-|Value|  19.043.0304.0007|
-
-If you are using a 32-bit machine, use the following registry detection rule:
+You can use the following registry detection rule:
 
 |Field|Value|
 |---|---|
 |Hive|   HKEY_LOCAL_MACHINE|
 |Key|    SOFTWARE\Microsoft\OneDrive|
 |Value|  Version|
-|32bit on 64bit| TRUE|
-|Type|   Version|
+|Type|   REG_SZ|
 |Value|  19.043.0304.0007|
